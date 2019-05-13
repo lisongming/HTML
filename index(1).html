@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生成随机数</title>
+  
+</head>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+</script>
+<script>
+    function sjs(){
+        var js=document.getElementById("s").value;
+        var min=document.getElementById("s1").value;
+        var max=document.getElementById("s2").value;
+        var num=new Set();
+        var sui=document.querySelector('p');.
+        while(Array.from(num).length<js){
+            num.add(Number(Math.floor(Math.random()*(max-min+1)+min))+Number(min))
+        }
+        sui.textContent=Array.from(num);
+        //$('.tt').text("aaaa")
+    }
+</script>
+<body>
+<div>
+    <label class="tt">数目：</label>
+    <input id="s" type="text"> 
+</div>  
+
+<label calss="tt">最小值：</label> 
+<input id="s1" type="text" class="f-text">
+<label calss="tt">最大值：</label> 
+<input id="s2" type="text" class="f-text">
+<button onclick="sjs()"> 生成</button>
+<p id="sui"></p>
+<p>This is some text in a very short paragraph</p>
+</body>
+</html>
